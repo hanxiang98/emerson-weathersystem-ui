@@ -1,0 +1,43 @@
+<div class="container">
+    <p-card class="cards" header="Hosttest City">
+        <p>
+            City Name: {{hottestCity}}
+        </p>
+        <p>
+            Number of days over 30 Celcius: {{hottestNumberOfDays}}
+        </p>
+    </p-card>
+
+    <p-card class="cards" header="Moistest City">
+        <p>
+            City Name: {{moistestCity}}
+        </p>
+        <p>
+            Average humidity: {{averageMoisture}}
+        </p>
+    </p-card>
+
+    <div class="line-break"></div>
+
+    <div class="chart-container">        
+        <p-dropdown class="cards" [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown>
+
+        <div class="card cards flex justify-content-center">
+            <p-calendar [(ngModel)]="rangeDates" selectionMode="range" [readonlyInput]="true" [showIcon]="true"></p-calendar>
+        </div>
+        
+        <p-button class="cards" label="Submit" (click)="onSubmitClick()"></p-button>
+        
+        <span class="line-break"></span>
+        
+        <!--
+        {{temperatureVariables | json}}
+        
+        <div class="card chart">
+            <p-chart type="line" [data]="data" [options]="options"></p-chart>
+        </div>
+        -->
+
+        <canvas id="myChart" class="chart"></canvas>
+    </div>
+</div>

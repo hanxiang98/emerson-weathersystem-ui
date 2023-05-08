@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    justify-content: center;
+}
+
+.cards{
+    margin: 10px;
+}
+
+.line-break {
+    width: 100%;
+}
+
+.chart-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-top: 50px;
+    justify-content: left;
+}
+
+.chart{
+    width: 100%;
+}
